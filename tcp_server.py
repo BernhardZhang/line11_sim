@@ -161,8 +161,8 @@ class TcpServer(QtCore.QObject):
 
             for l in range(self.number_of_train_services):
                 table_widget.setVerticalHeaderItem(l, QtWidgets.QTableWidgetItem('第{}列車'.format(l + 1)))
-                table_widget.setItem(l, 0, QtWidgets.QTableWidgetItem(QtWidgets.QTableWidgetItem('train_group')))
-                table_widget.setItem(l, 1, QtWidgets.QTableWidgetItem(QtWidgets.QTableWidgetItem('train' + str(random.randint(1, 60)))))
+                table_widget.setItem(l, 0, QtWidgets.QTableWidgetItem(QtWidgets.QTableWidgetItem(str(random.randint(1, 55)))))
+                table_widget.setItem(l, 1, QtWidgets.QTableWidgetItem(QtWidgets.QTableWidgetItem(str(random.randint(1, 100)))))
                 table_widget.setItem(l, 3, QtWidgets.QTableWidgetItem(QtWidgets.QTableWidgetItem(str(random.randint(1, 10)))))
                 table_widget.setItem(l, 4, QtWidgets.QTableWidgetItem(QtWidgets.QTableWidgetItem(str(random.randint(1, 10)))))
                 dst = destinations_downward if i % 2 == 0 else destinations_upward
